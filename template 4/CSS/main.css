@@ -36,6 +36,22 @@ a {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--alt-blue);
+}
+
 .page {
     background-color: #f1f5f9;
     min-height: 100vh;
@@ -156,4 +172,110 @@ a {
     height: 32px;
     border-radius: 50%;
     margin-left: 15px;
+}
+
+.page h1 {
+    margin: 20px 20px 40px;
+}
+
+.page h1:before,
+.page h1:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+}
+
+.page h1:before {
+    width: 150px;
+    background-color: white;
+}
+
+.page h1:after {
+    width: 50px;
+    background-color: black;
+}
+
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+.welcome {
+    overflow: hidden;
+}
+
+.welcome .intro .text {
+    text-align: left;
+}
+
+.welcome .intro .text h2 {
+    font-size: 24px;
+}
+
+.welcome .intro .text p {
+    color: #888;
+    font-size: 16px;
+}
+
+.welcome .intro img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+
+.welcome .Profile {
+    width: 64px;
+    padding: 2px;
+    margin-top: -32px;
+    margin-left: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.welcome .body {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.welcome .body div {
+    flex: 1;
+}
+
+.welcome .body div p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.welcome .visit {
+    margin: 0 15px 15px auto;
+    transition: 0.3s;
+}
+
+.welcome .visit:hover {
+    background-color: var(--alt-blue);
+}
+
+@media (max-width: 767px) {
+    .welcome .intro {
+        padding-bottom: 30px;
+    }
+    .welcome .Profile {
+        margin-left: 0;
+    }
+    .welcome .body > div:not(:last-child) {
+        margin-bottom: 20px;
+    }
 }
