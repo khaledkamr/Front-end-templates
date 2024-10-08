@@ -37,7 +37,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -45,6 +45,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
     background-color: var(--blue);
 }
 
@@ -259,6 +260,10 @@ a {
     margin-top: 10px;
 }
 
+.welcome .body div:first-child {
+    text-transform: capitalize;
+}
+
 .welcome .visit {
     margin: 0 15px 15px auto;
     transition: 0.3s;
@@ -278,4 +283,92 @@ a {
     .welcome .body > div:not(:last-child) {
         margin-bottom: 20px;
     }
+}
+
+.draft textarea {
+    resize: none;
+    height: 180px;
+}
+
+.draft .save {
+    margin: 0 0 0 auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.draft .save:hover {
+    background-color: var(--alt-blue);
+}
+
+.targets .target-row .icon {
+    width: 80px;
+    height: 80px;
+}
+
+.targets .blue .icon {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.targets .orange .icon {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.targets .green .icon {
+    background-color: rgb(34 197 94 / 20%);
+}
+
+.targets .target-row .details {
+    flex: 1;
+}
+
+.targets .target-row .details .progress {
+    height: 4px;
+}
+
+.targets .blue .details .progress {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.targets .orange .details .progress {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.targets .green .details .progress {
+    background-color: rgb(34 197 94 / 20%);
+}
+
+.targets .target-row .details .progress > span {
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.targets .target-row .details .progress > span span {
+    right: -16px;
+    bottom: 16px;
+    font-size: 13px;
+    padding: 2px 5px;
+}
+
+.targets .target-row .details .progress > span span:after {
+    content: "";
+    position: absolute;
+    border-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.targets .blue .details .progress > span span:after {
+    border-top-color: var(--blue);
+}
+
+.targets .orange .details .progress > span span:after {
+    border-top-color: var(--orange);
+}
+
+.targets .green .details .progress > span span:after {
+    border-top-color: var(--green);
 }
