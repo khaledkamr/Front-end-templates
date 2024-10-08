@@ -372,3 +372,14 @@ a {
 .targets .green .details .progress > span span:after {
     border-top-color: var(--green);
 }
+
+@media (max-width: 767px) {
+    .tickets > div {
+        flex-direction: column;
+    }
+}
+
+.tickets .box {
+    flex-basis: calc(50% - 20px);
+    border: 1px solid #ccc;
+}
