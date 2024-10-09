@@ -1,0 +1,191 @@
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 + p {
+    /* mt-0 mb-20 c-gray fs-15 */
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .settings-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+.settings-page .site-control textarea {
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 150px;
+}
+
+.general-info :disabled {
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+    display: inline-flex;
+    width: calc(100% - 80px);
+}
+
+.security .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.social .input-media {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.social .input-media i {
+    border-right: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+
+.social .input-media input {
+    height: 40px;
+}
+
+.social .input-media:focus-within i {
+    color: black;
+}
+
+.widgets-control ul li {
+    margin-bottom: 15px;
+}
+
+.widgets-control input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.widgets-control ul li label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.widgets-control ul li label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--gray);
+    border-radius: 6px;
+}
+
+.widgets-control ul li label:hover::before {
+    border-color: var(--alt-blue);
+}
+
+.widgets-control ul li label::after {
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    background-color: var(--blue);
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(-360deg);
+    transition: 0.3s;
+}
+
+.widgets-control input[type="checkbox"]:checked + label::after {
+    transform: scale(1) rotate(0);
+}
+
+.backup ul {
+    border-bottom: 1px solid #ccc;
+}
+
+.backup input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.backup li label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.backup li label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--gray);
+}
+
+.backup li label::after {
+    content: "";
+    position: absolute;
+    left: 4.8px;
+    top: 4.8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.backup li input:checked + label::before {
+    border-color: var(--blue);
+}
+
+.backup li input:checked + label::after {
+    transform: scale(1);
+}
+
+@media (max-width: 767px) {
+    .backup .servers {
+        flex-wrap: wrap;
+    }
+}
+
+.backup .servers .box {
+    border: 2px solid #eee;
+    position: relative;
+}
+
+.backup .servers .box:not(:last-child) {
+    margin-right: 10px;
+}
+
+.backup .servers .box label {
+    cursor: pointer;
+}
+
+.backup .servers input:checked + .box {
+    border-color: var(--blue);
+    color: var(--blue);
+}
