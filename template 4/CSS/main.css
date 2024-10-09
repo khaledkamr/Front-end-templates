@@ -60,7 +60,7 @@ a {
 }
 
 .toggle-switch {
-    background-color: #ccc;
+    background-color: var(--red);
     width: 78px;
     height: 32px;
     border-radius: 16px;
@@ -83,7 +83,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
+    color: var(--red);
     transition: 0.3s;
 }
 
