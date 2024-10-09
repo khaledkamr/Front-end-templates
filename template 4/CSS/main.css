@@ -38,10 +38,11 @@ a {
 
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: rgb(24 119 242 / 20%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -430,3 +431,216 @@ a {
 .tasks .done i {
     color: #d8d8d8;
 }
+
+.search-items .head {
+    border-bottom: 1px solid #eee;
+}
+
+.uploads .file-row img {
+    width: 40px;
+}
+
+.uploads .file-row:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.project-progress ul::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 11px;
+    top: 0;
+    background-color: var(--blue);
+}
+
+.project-progress ul li::before {
+    content: "";
+    display: block;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid var(--blue);
+    z-index: 1;
+}
+
+.project-progress ul .done::before {
+    background-color: var(--blue);
+}
+
+.project-progress ul .curr::before {
+    animation: change-color 1.5s infinite;
+}
+
+@keyframes change-color {
+    0%, 100% {
+        background-color: white;
+    }
+    50% {
+        background-color: var(--blue);
+    }
+}
+
+.project-progress img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 30%;
+}
+
+@media (max-width: 767px) {
+    .project-progress img {
+        display: none;
+    }
+}
+
+.reminders ul li > span {
+    width: 15px;
+    height: 15px;
+}
+
+.reminders ul li .blue {
+    border-left: 1px solid var(--blue);
+}
+
+.reminders ul li .green {
+    border-left: 1px solid var(--green);
+}
+
+.reminders ul li .orange {
+    border-left: 1px solid var(--orange);
+}
+
+.reminders ul li .red {
+    border-left: 1px solid var(--red);
+}
+
+.post .user img {
+    width: 48px;
+}
+
+.post .body {
+    line-height: 1.8;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    min-height: 140px;
+}
+
+.social-media .box .stats {
+    flex: 1;
+}
+
+.social-media .box i {
+    width: 65px;
+    height: 65px;
+    display: flex;
+}
+
+.social-media .twitter i {
+    background-color: black;
+}
+
+.social-media .facebook i {
+    background-color: var(--blue);
+}
+
+.social-media .youtube i {
+    background-color: red;
+}
+
+.social-media .linkedin i {
+    background-color: #0077b5;
+}
+
+.social-media .twitter .stats {
+    color: black;
+    background-color: rgba(80, 80, 80, 0.13);
+}
+.social-media .facebook .stats {
+    color: var(--blue);
+    background-color: rgb(24 119 242 / 20%);
+}
+.social-media .youtube .stats {
+    color: red;
+    background-color: rgb(255 0 0 / 20%);
+}
+.social-media .linkedin .stats {
+    color: #0077b5;
+    background-color: rgb(0 119 181 / 20%);
+}
+
+.social-media .twitter .stats a {
+    background-color: black;
+}
+
+.social-media .facebook .stats a {
+    background-color: var(--blue);
+}
+
+.social-media .youtube .stats a {
+    background-color: red;
+}
+
+.social-media .linkedin .stats a {
+    background-color: #0077b5;
+}
+
+@media (max-width: 767px) {
+    .social-media .box .stats {
+        padding-right: 10px;
+        padding-left: 10px;
+    } 
+}
+
+.projects .responsive-table {
+    overflow-x: auto;
+}
+
+.projects table {
+    width: 100%;
+    min-width: 1000px;
+    border-spacing: 0;
+}
+
+.projects table tr {
+    transition: 0.3s;
+}
+.projects table tr:hover {
+    background-color: #f8f7f7;
+}
+
+.projects table thead td {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.projects table td {
+    padding: 15px;
+}
+
+.projects tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.projects tbody tr td:last-child {
+    border-right: 1px solid #eee;
+}
+
+.projects table img {
+    width: 32px;
+    padding: 2px;
+    background-color: white;
+}
+
+.projects table img:not(:first-child) {
+    margin-left: -20px;
+}
+
+.projects table img:hover {
+    z-index: 100;
+}
+
