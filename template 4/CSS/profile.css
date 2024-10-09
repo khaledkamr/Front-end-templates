@@ -1,0 +1,69 @@
+@media (max-width: 767px) {
+    .profile-page .overview {
+        flex-direction: column;
+    }
+}
+
+.profile-page .overview .avatar-box {
+    width: 300px;
+}
+
+@media (min-width: 768px) {
+    .profile-page .avatar-box {
+        border-right: 1px solid #eee;
+    }
+}
+
+.profile-page .overview img {
+    width: 120px;
+}
+
+.profile-page .overview .level {
+    height: 5px;
+    overflow: hidden;
+    width: 70%;
+    margin: auto;
+}
+
+.profile-page .overview .level span {
+    position: absolute;
+    background-color: var(--blue);
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.profile-page .overview .rate i {
+    color: rgb(255, 208, 0);
+}
+
+.profile-page .overview .info {
+    flex: 1;
+}
+
+.profile-page .info .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+    .profile-page .info .box {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.profile-page .info .box > div {
+    min-width: 250px;
+    padding: 10px 0 0;
+}
+
+.profile-page .info .toggle-switch {
+    height: 20px;
+}
+
+.profile-page .info .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+}
+
