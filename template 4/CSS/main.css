@@ -129,7 +129,7 @@ a {
     overflow: hidden;
 }
 
-.header .search::before {
+/* .header .search::before {
     content: "\f002";
     font-family: var(--fa-style-family-classic);
     font-weight: 900;
@@ -139,23 +139,53 @@ a {
     transform: translateY(-50%);
     font-size: 14px;
     color: var(--gray);
+    transition: 0.3s;
+} */
+
+.search {
+    position: relative;
+}
+
+.header .search i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--gray);
+    transition: 0.3s;
 }
 
 .header .search input {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-left: 5px;
     padding-left: 30px;
     width: 160px;
-    transition: width 0.3s;
+    transition: 0.3s;
 }
 
 .header .search input:focus {
     width: 250px;
+    margin-left: 50px;
 }
 
-.header .search input:focus::placeholder {
+.header .search input:focus + .search-icon {
+    margin-left: 45px;
+}
+
+/* .header .search input:focus::placeholder {
     opacity: 0;
+} */
+
+.header .icons .notification {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header .icons .notification:hover {
+    transform: rotate(10deg);
 }
 
 .header .icons .notification::before {
