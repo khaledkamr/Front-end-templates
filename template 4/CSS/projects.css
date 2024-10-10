@@ -1,0 +1,149 @@
+.projects-page {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .projects-page {
+        grid-template-columns: minmax(100px, 1fr);
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
+.projects-page .project {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.projects-page .project .date {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.projects-page .project > p {
+    font-size: 13px;
+    color: var(--gray);
+    margin: 10px 0;
+}
+
+.projects-page .project .team {
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.projects-page .project .team a {
+    position: absolute;
+    transition: 0.3s;
+}
+
+.projects-page .project .team a:nth-child(2) {
+    left: 25px;
+}
+
+.projects-page .project .team a:nth-child(3) {
+    left: 50px;
+}
+
+.projects-page .project .team a:nth-child(4) {
+    left: 75px;
+}
+
+.projects-page .project .team a:nth-child(5) {
+    left: 100px;
+}
+
+.projects-page .project .team a:hover {
+    z-index: 100;
+    transform: scale(1.2);
+}
+
+.projects-page .project .team img {
+    width: 40px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.projects-page .project .team img:hover {
+    box-shadow: 0 0 5px rgb(134, 134, 134);
+}
+
+.projects-page .project .team img:not(:last-of-type) {
+    margin-left: -10px;
+}
+
+.projects-page .project .skills {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .skills {
+        flex-direction: column;
+    }
+}
+
+.projects-page .project .skills span {
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .skills span {
+        margin-bottom: 10px;
+    }
+}
+
+.projects-page .project .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .info {
+        flex-direction: column;
+    }
+}
+
+.projects-page .project .info .progress {
+    height: 8px;
+    width: 260px;
+    background-color: #eee;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .info .progress {
+        margin-bottom: 15px;
+    }
+}
+
+.projects-page .project .info .progress span {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.projects-page .project .info .cost {
+    color: var(---gray);
+    font-weight: 500;
+}
