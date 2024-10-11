@@ -1,0 +1,104 @@
+.plans-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.plans-page .plan {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.plans-page .plan .head {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border: 3px solid white;
+    margin-bottom: 20px;
+}
+
+.plans-page .free .head {
+    background-color: var(--green);
+    outline: 3px solid var(--green);
+}
+
+.plans-page .basic .head {
+    background-color: var(--blue);
+    outline: 3px solid var(--blue);
+}
+
+.plans-page .premium .head {
+    background-color: var(--orange);
+    outline: 3px solid var(--orange);
+}
+
+.plans-page .plan .head .type {
+    font-size: 24px;
+}
+
+.plans-page .plan .head .price {
+    width: fit-content;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+}
+
+.plans-page .plan .head .price::before {
+    content: "$";
+    position: absolute;
+    font-size: 25px;
+    left: -20px;
+    top: -5px;
+}
+
+.plans-page .plan ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.plans-page .plan ul li .feature {
+    display: flex;
+    align-items: center;
+}
+
+.plans-page .plan ul li .feature i {
+    margin-right: 10px;
+}
+
+.plans-page .plan ul li .feature i.fa-check {
+    color: var(--green);
+}
+
+.plans-page .plan ul li .feature i.fa-xmark {
+    color: red;
+}
+
+.plans-page .plan ul li > i {
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.plans-page .plan button {
+    display: block;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+}
+
+.plans-page .free button {
+    background-color: var(--green);
+}   
+
+.plans-page .basic button {
+    background-color: var(--blue);
+}   
+
+.plans-page .premium button {
+    background-color: var(--orange);
+}   
