@@ -51,6 +51,7 @@
 }
 
 .friends-page .friend .body {
+    position: relative;
     padding: 5px 0;
     border-bottom: 1px solid #eee;
 }
@@ -102,4 +103,16 @@
 
 .friends-page .friend .footer button.remove:hover {
     background-color: rgb(216, 3, 3);
+}
+
+.friends-page .vip .body:before {
+    content: "VIP";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(255, 153, 0);
+    opacity: 30%;
 }
