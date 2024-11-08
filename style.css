@@ -9,9 +9,15 @@ h1 {
     font-size: 80px;
 }
 
+@media (max-width: 767px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
 .templates {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 40px;
     margin: 40px;
 }
@@ -27,6 +33,15 @@ h1 {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+}
+
+@media (max-width: 767px) {
+    .templates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .templates .template {
+        height: 200px;
+    }
 }
 
 .templates .template a {
