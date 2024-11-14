@@ -168,3 +168,44 @@ body {
 .project {
     background-color: var(--dark-color);
 }
+
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe h4 {
+    color: var(--dark-color);
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.subscribe input {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input:focus {
+    outline: none;
+}
+
+.subscribe input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.subscribe button {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+
+footer {
+    background-color: var(--dark-color);
+}
+
+footer .Graphberry {
+    color: var(--green-color);
+}
+
+footer .Bondi-Inc {
+    color: var(--yellow-color);
+}
