@@ -16,6 +16,10 @@ This repository contains a collection of front-end templates created using HTML 
 4. **Template Four**  
    A fully styled template using a custom CSS framework developed in-house, containing reusable classes to streamline styling.
 
-## Reference
+5. **Template Five**  
+   Built using the Bootstrap framework, this template demonstrates the power of Bootstrap's utility classes and responsive grid system. 
+
+## References
 
 - **[HTML & CSS Practice](https://elzero.org/category/courses/html-and-css-practice/)**
+- **[Bootstrap Designs](https://elzero.org/category/courses/bootstrap-designs/)**
